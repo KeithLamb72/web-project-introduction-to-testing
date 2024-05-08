@@ -67,14 +67,14 @@ export default function App({ lang = 'en' }) {
         {failure && <h4 className="error">{failure}</h4>}
 
         <div className="inputGroup">
-          <label htmlFor="username">{texts.LABEL_USERNAME}:</label>
+          <label htmlFor="username">{texts.LABEL_USERNAME}</label>
           <input id="username" name="username" onChange={onChange} value={values.username} type="text" placeholder={texts.PLACEHOLDER_USERNAME} />
           {errors.username && <div className="validation">{errors.username}</div>}
         </div>
 
         <div className="inputGroup">
           <fieldset>
-            <legend>{texts.TEXT_FAV_LANG}:</legend>
+            <legend>{texts.TEXT_FAV_LANG}</legend>
             <label>
               <input onChange={onChange} type="radio" name="favLanguage" value="javascript" checked={values.favLanguage === 'javascript'} />
               {texts.TEXT_FAV_LANG_JS}
@@ -107,7 +107,7 @@ export default function App({ lang = 'en' }) {
         </div>
 
         <div>
-          <input type="submit" disabled={!submitAllowed} value="Send" />
+          <input type="submit" disabled={!submitAllowed} value={texts.TEXT_SUBMIT} />
         </div>
       </form>
     </div>
